@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanWellness | Nigerian Fitness & Nutrition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Urbanwellness/assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'naija-green': '#008753',
+                        'naija-yellow': '#FCD116',
+                        'naija-red': '#E52B50',
+                        'lagos-blue': '#1DA1F2',
+                        'african-sunset': '#FF7F50',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'african': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-naija-green flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-naija-green">Urban<span class="text-naija-yellow">Wellness</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="active nav-link text-naija-green hover:text-naija-green font-medium">Home</a>
+                    <a href="#workouts" class="nav-link text-gray-700 hover:text-naija-green font-medium">Workouts</a>
+                    <a href="#nutrition" class="nav-link text-gray-700 hover:text-naija-green font-medium">Nutrition</a>
+                    <a href="#community" class="nav-link text-gray-700 hover:text-naija-green font-medium">Community</a>
+                    <a href="#blog" class="nav-link text-gray-700 hover:text-naija-green font-medium">Blog</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-naija-green hover:bg-naija-red text-white px-4 py-2 rounded-full font-medium transition duration-300">
+                        Sign In
+                    </button>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-african">
+                        Transform Your <span class="text-naija-yellow">Fitness</span> The Nigerian Way
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8">
+                        Personalized workout plans and nutrition tracking with authentic Nigerian flavors. 
+                        Join thousands of health-conscious Nigerians on their wellness journey.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-naija-green hover:bg-gray-100 px-6 py-3 rounded-full font-bold text-lg transition duration-300 pulse-animation">
+                            Start Free Trial
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-naija-green px-6 py-3 rounded-full font-bold text-lg transition duration-300">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="/Urbanwellness/assets/images/hero-img.avif" 
+                             alt="Nigerian fitness enthusiast" 
+                             class="rounded-lg shadow-2xl w-full max-w-md border-4 border-white">
+                        <div class="absolute -bottom-6 -right-6 bg-naija-yellow text-naija-green p-4 rounded-full shadow-lg">
+                            <i class="fas fa-fire text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-naija-green mb-2">50K+</div>
+                    <div class="text-gray-600">Active Members</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-naija-yellow mb-2">500+</div>
+                    <div class="text-gray-600">Nigerian Recipes</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-naija-red mb-2">24/7</div>
+                    <div class="text-gray-600">Expert Support</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-lagos-blue mb-2">95%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workouts Section -->
+    <section id="workouts" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-naija-green">Custom Workout Plans</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    From home workouts to gym sessions, we've got you covered with plans tailored to your Nigerian lifestyle.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workout Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden workout-card">
+                    <div class="relative h-48">
+                        <img src="/Urbanwellness/assets/images/singgle fitness.avif" 
+                             alt="Home workout" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-naija-red text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Beginner
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-naija-green">Naija Home Burn</h3>
+                        <p class="text-gray-600 mb-4">
+                            No equipment? No problem! Transform your living room into a fitness studio with these Nigerian-inspired moves.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-clock mr-1"></i> 30 mins
+                                </span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-fire mr-1"></i> 250 cal
+                                </span>
+                            </div>
+                            <button class="text-naija-green hover:text-naija-red font-medium">
+                                View Plan <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Workout Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden workout-card">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Gym workout" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-naija-yellow text-naija-green px-3 py-1 rounded-full text-sm font-bold">
+                            Intermediate
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-naija-green">Lagos Gym Power</h3>
+                        <p class="text-gray-600 mb-4">
+                            Maximize your gym time with this intense workout plan designed for busy Lagos professionals.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-clock mr-1"></i> 45 mins
+                                </span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-fire mr-1"></i> 400 cal
+                                </span>
+                            </div>
+                            <button class="text-naija-green hover:text-naija-red font-medium">
+                                View Plan <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Workout Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden workout-card">
+                    <div class="relative h-48">
+                        <img src="/Urbanwellness/assets/images/group fitness.avif" 
+                             alt="Dance workout" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-naija-green text-white px-3 py-1 rounded-full text-sm font-bold">
+                            All Levels
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-naija-green">Afrobeat Cardio</h3>
+                        <p class="text-gray-600 mb-4">
+                            Burn calories while dancing to your favorite Afrobeat hits! The most fun you'll have working out.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-clock mr-1"></i> 30 mins
+                                </span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-fire mr-1"></i> 350 cal
+                                </span>
+                            </div>
+                            <button class="text-naija-green hover:text-naija-red font-medium">
+                                View Plan <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-naija-green hover:bg-naija-red text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                    Explore All Workouts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-naija-green">Nigerian Nutrition Tracking</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Track your favorite Nigerian meals while maintaining your health goals. No more guessing calories in your jollof!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Food Card 1 -->
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="/Urbanwellness/assets/images/jollof rice.avif" 
+                         alt="Jollof Rice" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-naija-green">Jollof Rice</h3>
+                            <span class="bg-naija-yellow text-naija-green px-2 py-1 rounded-full text-xs font-bold">
+                                350 cal
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Nigeria's famous rice dish with tomatoes, peppers, and spices.
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <span>Carbs: 55g</span>
+                            <span>Protein: 8g</span>
+                            <span>Fat: 12g</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Card 2 -->
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Egusi Soup" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-naija-green">Egusi Soup</h3>
+                            <span class="bg-naija-yellow text-naija-green px-2 py-1 rounded-full text-xs font-bold">
+                                280 cal
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Melon seed soup with vegetables, meat, and fish. Protein-packed!
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <span>Carbs: 15g</span>
+                            <span>Protein: 22g</span>
+                            <span>Fat: 18g</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Card 3 -->
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="/Urbanwellness/assets/images/suya.avif" 
+                         alt="Suya" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-naija-green">Suya</h3>
+                            <span class="bg-naija-yellow text-naija-green px-2 py-1 rounded-full text-xs font-bold">
+                                220 cal
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Spicy grilled skewered meat - Nigeria's ultimate protein snack.
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <span>Carbs: 5g</span>
+                            <span>Protein: 30g</span>
+                            <span>Fat: 10g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-naija-green text-naija-green hover:bg-naija-green hover:text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                    Explore 500+ Nigerian Foods
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-naija-green">Your Progress Dashboard</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Track your fitness journey with our intuitive dashboard. Monitor weight loss, workout streaks, calorie intake, and more - all in one place.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-naija-green bg-opacity-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-weight text-naija-green text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-sm">Weight Loss</div>
+                                    <div class="font-bold text-xl">-8.5kg</div>
+                                </div>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-naija-green rounded-full" style="width: 70%"></div>
+                            </div>
+                            <div class="text-right text-xs text-gray-500 mt-1">70% to goal</div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-naija-yellow bg-opacity-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-fire-alt text-naija-yellow text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-sm">Calories Burned</div>
+                                    <div class="font-bold text-xl">12,450</div>
+                                </div>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-naija-yellow rounded-full" style="width: 45%"></div>
+                            </div>
+                            <div class="text-right text-xs text-gray-500 mt-1">Monthly goal</div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-naija-red bg-opacity-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-dumbbell text-naija-red text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-sm">Workout Streak</div>
+                                    <div class="font-bold text-xl">21 days</div>
+                                </div>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-naija-red rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="text-right text-xs text-gray-500 mt-1">Keep it up!</div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-lagos-blue bg-opacity-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-utensils text-lagos-blue text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-sm">Meals Tracked</div>
+                                    <div class="font-bold text-xl">87</div>
+                                </div>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-lagos-blue rounded-full" style="width: 65%"></div>
+                            </div>
+                            <div class="text-right text-xs text-gray-500 mt-1">This month</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <img src="/Urbanwellness/assets/images/singgle fitness.avif" 
+                             alt="Dashboard preview" 
+                             class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Challenges -->
+    <section id="community" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-naija-green">Community Challenges</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Join thousands of Nigerians in fun fitness challenges. Compete, motivate each other, and win prizes!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Challenge 1 -->
+                <div class="bg-naija-green text-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-xs uppercase font-bold tracking-wider mb-1">Active</div>
+                                <h3 class="text-xl font-bold mb-2">30-Day Jollof Burn</h3>
+                            </div>
+                            <div class="bg-white text-naija-green rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="mb-6">
+                            Burn calories equivalent to 100 plates of jollof rice in 30 days. Can you handle the heat?
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-sm">Participants</div>
+                                <div class="font-bold">8,742</div>
+                            </div>
+                            <div>
+                                <div class="text-sm">Days Left</div>
+                                <div class="font-bold">12</div>
+                            </div>
+                        </div>
+                        <div class="h-2 bg-white bg-opacity-30 rounded-full mb-2">
+                            <div class="h-2 bg-naija-yellow rounded-full" style="width: 65%"></div>
+                        </div>
+                        <div class="text-sm text-right">65% completed</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 px-6 py-4">
+                        <button class="w-full bg-white text-naija-green hover:bg-gray-100 py-2 rounded-full font-bold transition duration-300">
+                            Join Challenge
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Challenge 2 -->
+                <div class="bg-naija-red text-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-xs uppercase font-bold tracking-wider mb-1">Starting Soon</div>
+                                <h3 class="text-xl font-bold mb-2">Lagos Marathon Prep</h3>
+                            </div>
+                            <div class="bg-white text-naija-red rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-running text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="mb-6">
+                            8-week training program to prepare you for the Lagos City Marathon. All levels welcome!
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-sm">Registered</div>
+                                <div class="font-bold">5,219</div>
+                            </div>
+                            <div>
+                                <div class="text-sm">Starts In</div>
+                                <div class="font-bold">5 days</div>
+                            </div>
+                        </div>
+                        <div class="h-2 bg-white bg-opacity-30 rounded-full mb-2">
+                            <div class="h-2 bg-naija-yellow rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="text-sm text-right">Registration open</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 px-6 py-4">
+                        <button class="w-full bg-white text-naija-red hover:bg-gray-100 py-2 rounded-full font-bold transition duration-300">
+                            Register Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Challenge 3 -->
+                <div class="bg-lagos-blue text-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-xs uppercase font-bold tracking-wider mb-1">Ongoing</div>
+                                <h3 class="text-xl font-bold mb-2">Corporate Fitness War</h3>
+                            </div>
+                            <div class="bg-white text-lagos-blue rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-building text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="mb-6">
+                            Companies compete to see whose employees are the fittest. Bragging rights and prizes await!
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-sm">Companies</div>
+                                <div class="font-bold">127</div>
+                            </div>
+                            <div>
+                                <div class="text-sm">Ends In</div>
+                                <div class="font-bold">18 days</div>
+                            </div>
+                        </div>
+                        <div class="h-2 bg-white bg-opacity-30 rounded-full mb-2">
+                            <div class="h-2 bg-naija-yellow rounded-full" style="width: 42%"></div>
+                        </div>
+                        <div class="text-sm text-right">42% completed</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 px-6 py-4">
+                        <button class="w-full bg-white text-lagos-blue hover:bg-gray-100 py-2 rounded-full font-bold transition duration-300">
+                            Join Your Company
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-naija-green text-naija-green hover:bg-naija-green hover:text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                    See All Challenges
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-naija-green">What Nigerians Are Saying</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Real stories from our community members across Nigeria.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="/Urbanwellness/assets/images/amina.jpg" 
+                             alt="Amina" 
+                             class="w-16 h-16 rounded-full object-cover border-2 border-naija-green">
+                        <div class="ml-4">
+                            <div class="font-bold text-lg">Amina K.</div>
+                            <div class="text-naija-green">Lagos</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "As a busy Lagos professional, I struggled to find time for fitness. UrbanWellness' 20-minute home workouts changed everything! I've lost 12kg in 4 months while still enjoying my jollof."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="/Urbanwellness/assets/images/emeka.jpg" 
+                             alt="Emeka" 
+                             class="w-16 h-16 rounded-full object-cover border-2 border-naija-green">
+                        <div class="ml-4">
+                            <div class="font-bold text-lg">Emeka O.</div>
+                            <div class="text-naija-green">Abuja</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "The Nigerian food database is a game-changer! I can finally track my calories without giving up egusi and pounded yam. The community challenges keep me motivated too."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="/Urbanwellness/assets/images/chioma.jpg" 
+                             alt="Chioma" 
+                             class="w-16 h-16 rounded-full object-cover border-2 border-naija-green">
+                        <div class="ml-4">
+                            <div class="font-bold text-lg">Chioma B.</div>
+                            <div class="text-naija-green">Port Harcourt</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "I love the Afrobeat dance workouts! It doesn't even feel like exercise. My whole family joins in now. We're healthier and having fun together."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star text-naija-yellow"></i>
+                        <i class="fas fa-star-half-alt text-naija-yellow"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-naija-green">From Our Blog</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Fitness tips, healthy Nigerian recipes, and mental wellness advice.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" 
+                         alt="Healthy Nigerian food" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-xs text-naija-red font-bold uppercase mb-2">Nutrition</div>
+                        <h3 class="text-xl font-bold mb-3 text-naija-green">5 Healthy Twists on Nigerian Classics</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover how to make your favorite Nigerian dishes healthier without sacrificing flavor.
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" 
+                                 alt="Author" 
+                                 class="w-8 h-8 rounded-full mr-2">
+                            <span class="text-sm text-gray-500">By Dr. Ngozi • 3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Workout" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-xs text-naija-green font-bold uppercase mb-2">Fitness</div>
+                        <h3 class="text-xl font-bold mb-3 text-naija-green">Building a Home Gym in Small Lagos Apartments</h3>
+                        <p class="text-gray-600 mb-4">
+                            Space-saving equipment and creative solutions to create an effective workout space at home.
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" 
+                                 alt="Author" 
+                                 class="w-8 h-8 rounded-full mr-2">
+                            <span class="text-sm text-gray-500">By Coach Tunde • 1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Mental wellness" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-xs text-lagos-blue font-bold uppercase mb-2">Wellness</div>
+                        <h3 class="text-xl font-bold mb-3 text-naija-green">Managing Stress in Nigeria's Fast-Paced Cities</h3>
+                        <p class="text-gray-600 mb-4">
+                            Practical mindfulness techniques adapted for the unique pressures of urban Nigerian life.
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/62.jpg" 
+                                 alt="Author" 
+                                 class="w-8 h-8 rounded-full mr-2">
+                            <span class="text-sm text-gray-500">By Dr. Amina • 2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-naija-green text-naija-green hover:bg-naija-green hover:text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                    Read More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-naija-green text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-african">
+                        Ready to Start Your Nigerian Wellness Journey?
+                    </h2>
+                    <p class="text-lg mb-8">
+                        Join UrbanWellness today and get access to personalized fitness plans, Nigerian nutrition tracking, and an amazing community - all tailored for Nigerians.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-naija-green hover:bg-gray-100 px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                            Start Free 7-Day Trial
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-naija-green px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Happy members" 
+                             class="rounded-lg shadow-2xl w-full max-w-md border-4 border-white">
+                        <div class="absolute -bottom-6 -left-6 bg-naija-yellow text-naija-green p-4 rounded-full shadow-lg">
+                            <i class="fas fa-heart text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-naija-green flex items-center justify-center">
+                            <i class="fas fa-dumbbell text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Urban<span class="text-naija-yellow">Wellness</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Nigeria's premier fitness and nutrition platform, designed for the unique needs of health-conscious Nigerians.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-naija-green transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-naija-green transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-naija-green transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-naija-green transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Workouts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Nutrition</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-naija-green mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Fitness Street, Victoria Island, Lagos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-naija-green mr-3"></i>
+                            <span class="text-gray-400">+234 812 345 6789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-naija-green mr-3"></i>
+                            <span class="text-gray-400">hello@urbanwellness.ng</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-3">Download Our App</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="bg-black hover:bg-gray-800 px-4 py-2 rounded-lg flex items-center">
+                                <i class="fab fa-apple text-2xl mr-2"></i>
+                                <div class="text-left">
+                                    <div class="text-xs">Download on the</div>
+                                    <div class="font-bold">App Store</div>
+                                </div>
+                            </a>
+                            <a href="#" class="bg-black hover:bg-gray-800 px-4 py-2 rounded-lg flex items-center">
+                                <i class="fab fa-google-play text-2xl mr-2"></i>
+                                <div class="text-left">
+                                    <div class="text-xs">Get it on</div>
+                                    <div class="font-bold">Google Play</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 UrbanWellness. All rights reserved. Designed with <i class="fas fa-heart text-naija-red"></i> in Nigeria.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Urbanwellness/assets/js/index.js"></script>
+</body>
+</html>
